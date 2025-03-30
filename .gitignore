@@ -1,1 +1,17 @@
-*.pyc\n__pycache__/\nvenv/\n*.sqlite3\n.env\n.vscode/\n*.idea/
+# Python junk
+__pycache__/
+*.pyc
+*.pyo
+*.sqlite3
+
+# Virtual environment
+venv/
+env/
+
+# Static artifacts
+staticfiles/
+media/
+
+# OS and editor stuff
+.DS_Store
+*.log

@@ -1,0 +1,5 @@
+html, body {
+  font-size: 18px !important; /* Makes 1rem = 18px */
+}
+
+.rd-navbar-main{border:none !important;}

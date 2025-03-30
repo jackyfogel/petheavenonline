@@ -1,0 +1,184 @@
+{% load static %}
+<!DOCTYPE html>
+<html class="wide wow-animation" lang="en">
+  <head>
+    <title>Home</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="icon" href="{% static 'images/favicon.ico' %}" type="image/x-icon">
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Raleway:300,400,500,600,700%7CPlayfair+Display:400,400i,700,900%7CPoppins:300">
+    <link rel="stylesheet" href="{% static '' %}css/bootstrap.css">
+    <link rel="stylesheet" href="{% static '' %}css/fonts.css">
+    <link rel="stylesheet" href="{% static '' %}css/style.css">
+    <link rel="stylesheet" href="{% static '' %}css/mycss.css">
+  </head>
+<body>
+<div class="preloader">
+      <div class="preloader-body">
+        <div class="cssload-container">
+          <div class="cssload-speeding-wheel"></div>
+        </div>
+      </div>
+    </div>
+    <div class="page">
+      <!-- Page Header-->
+      <header class="section page-header">
+        <!-- RD Navbar-->
+        <div class="rd-navbar-wrap">
+          <nav class="rd-navbar rd-navbar-modern context-dark" data-layout="rd-navbar-fixed" data-sm-layout="rd-navbar-fixed" data-md-layout="rd-navbar-fixed" data-md-device-layout="rd-navbar-fixed" data-lg-layout="rd-navbar-fixed" data-lg-device-layout="rd-navbar-fixed" data-xl-layout="rd-navbar-static" data-xl-device-layout="rd-navbar-static" data-lg-stick-up-offset="46px" data-xl-stick-up-offset="46px" data-xxl-stick-up-offset="46px" data-lg-stick-up="true" data-xl-stick-up="true" data-xxl-stick-up="true">
+            <div class="rd-navbar-main-outer">
+              <div class="rd-navbar-main">
+                <!-- RD Navbar Panel-->
+                <div class="rd-navbar-panel">
+                  <!-- RD Navbar Toggle-->
+                  <button class="rd-navbar-toggle" data-rd-navbar-toggle=".rd-navbar-nav-wrap"><span></span></button>
+                  <!-- RD Navbar Brand-->
+                  <div class="rd-navbar-brand">
+                    <!--Brand--><a class="brand" href="index.html"><img class="brand-logo-dark" src="{% static 'images/logo.webp' %}" alt="" width="151" height="42"/><img class="brand-logo-light" src="{% static 'images/logo.webp' %}" alt="" width="151" height="42"/></a>
+                  </div>
+                </div>
+                <div class="rd-navbar-main-element">
+                  <div class="rd-navbar-nav-wrap">
+                    <!-- RD Navbar Nav-->
+                    <ul class="rd-navbar-nav">
+                      <li class="rd-nav-item active"><a class="rd-nav-link" href="/">Home</a>
+                      </li>
+                      <li class="rd-nav-item"><a href="{% url 'memorial' %}" class="rd-nav-link">Memorial</a>
+
+                      </li>
+
+
+
+                      <li class="rd-nav-item"><a class="rd-nav-link" href="contacts.html">Contacts</a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </nav>
+        </div>
+      </header>
+      <!-- Swiper-->
+
+<section class="text-white position-relative py-5" style="
+  background-image: url('{% static 'images/breadcrumbs-bg.jpg' %}');
+  background-size: cover;
+  background-position: center;
+  overflow: hidden;
+">
+  <!-- Dark overlay -->
+  <div style="
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.45);  /* Adjust opacity here */
+    z-index: 1;
+  "></div>
+
+  <!-- Actual content -->
+  <div class="container text-center position-relative" style="z-index: 2;padding-top:7rem;">
+    <img
+      src="{% static 'images/cat4394.jpg' %}"
+      class="rounded-circle mb-4 img-fluid"
+      alt="Pet Photo"
+      width="150"
+      height="150"
+      style="display: block; margin: 0 auto;"
+    >
+    <h2 class="breadcrumbs-custom-title" style="color:#ffffff">In Loving Memory of Bella</h2>
+    <p class="lead">2011 – 2023</p>
+    <p class="fst-italic">"Forever chasing butterflies in the sky."</p>
+  </div>
+</section>
+
+
+
+
+
+<section class="section section-lg bg-default">
+  <div class="container">
+    <!-- Pet Bio -->
+    <div class="row mb-5">
+      <div class="col-lg-8 mx-auto text-center">
+        <h3>Bella - A Life Well Lived</h3>
+        <p><strong>Breed:</strong> Golden Retriever | <strong>Age:</strong> 12 | <strong>Traits:</strong> Loyal, Gentle, Joyful</p>
+      </div>
+    </div>
+
+    <!-- About Pet -->
+    <div class="row mb-5">
+      <div class="col-lg-8 mx-auto">
+        <h4>About Bella</h4>
+        <p>Bella brought sunshine into every room she entered. From her morning tail wags to evening cuddle sessions, she had a way of making everyone feel special. She loved long walks, peanut butter treats, and her squeaky duck toy more than anything.</p>
+        <p>Bella brought sunshine into every room she entered. From her morning tail wags to evening cuddle sessions, she had a way of making everyone feel special. She loved long walks, peanut butter treats, and her squeaky duck toy more than anything.</p>
+        <p>Bella brought sunshine into every room she entered. From her morning tail wags to evening cuddle sessions, she had a way of making everyone feel special. She loved long walks, peanut butter treats, and her squeaky duck toy more than anything.</p>
+        <p>Bella brought sunshine into every room she entered. From her morning tail wags to evening cuddle sessions, she had a way of making everyone feel special. She loved long walks, peanut butter treats, and her squeaky duck toy more than anything.</p>
+      </div>
+    </div>
+
+
+
+    <!-- Photo Gallery -->
+<div class="row mb-5">
+  <div class="col-12">
+    <h4 class="text-center">Photo Gallery</h4>
+    <div class="row g-3">
+      <div class="col-md-4">
+        <img src="{% static 'images/cat887.jpg' %}" class="img-fluid rounded mx-auto d-block" alt="Pet photo 1">
+      </div>
+      <div class="col-md-4">
+        <img src="{% static 'images/cat781.jpg' %}" class="img-fluid rounded mx-auto d-block" alt="Pet photo 2">
+      </div>
+      <div class="col-md-4">
+        <img src="{% static 'images/cat4394.jpg' %}" class="img-fluid rounded mx-auto d-block" alt="Pet photo 3">
+      </div>
+    </div>
+  </div>
+</div>
+
+
+    <!-- YouTube Song -->
+    <div class="row mb-5">
+      <div class="col-lg-8 mx-auto text-center">
+        <h4 class="mb-4">A Song That Reminds Me of Bella</h4>
+        <div class="ratio ratio-16x9">
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/BWf-eARnf6U?si=QLSeo4R6uGNY2o8r" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+      </div>
+    </div>
+
+    <!-- Virtual Candles & Guest Messages -->
+    <div class="row mb-5">
+      <div class="col-lg-8 mx-auto">
+        <h4>Light a Candle for Bella</h4>
+        <form class="mb-4">
+          <div class="mb-3">
+            <!--<label for="guestName" class="form-label">Your Name (optional)</label>-->
+            <input type="text" class="form-control" id="guestName">
+          </div>
+          <div class="mb-3">
+            <!--<label for="guestMessage" class="form-label">Your Messagesssss</label>-->
+            <textarea class="form-control" id="guestMessage" rows="3"></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary">Light a Candle 🕯️</button>
+        </form>
+        <div class="guest-messages">
+          <p><strong>Emily:</strong> Bella was truly one of a kind. 🕯️</p>
+          <p><strong>Michael:</strong> Rest in peace sweet girl. 🕯️</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<div class="snackbars" id="form-output-global"></div>
+<script src="js/bootstrap.bundle.min.js"></script>
+<script src="{% static 'js/core.min.js' %}"></script>
+<script src="{% static 'js/script.js' %}"></script>
+
+
+</body>
+</html>
