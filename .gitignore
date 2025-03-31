@@ -1,17 +1,56 @@
-# Python junk
+# Python
 __pycache__/
-*.pyc
+*.py[cod]
 *.pyo
-*.sqlite3
+*.pyd
+*.pyc
 
-# Virtual environment
-venv/
+# Env
 env/
+venv/
+ENV/
+.venv/
+*.env
+*.env.*
 
-# Static artifacts
-staticfiles/
-media/
-
-# OS and editor stuff
-.DS_Store
+# Django
+db.sqlite3
 *.log
+*.pot
+*.pyc
+media/
+staticfiles/
+
+# VS Code
+.vscode/
+*.code-workspace
+
+# macOS
+.DS_Store
+
+# Pip
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Migrations (optional: include if you want to reset migrations often)
+*/migrations/__pycache__/
+*/migrations/*.py[cod]
+# Uncomment next line to ignore migration files entirely
+# */migrations/*.py
+
+# Node (if using npm/yarn in your static folder)
+node_modules/
+
+# Coverage & Testing
+htmlcov/
+.coverage
+.tox/
+.nox/
+.cache/
+
+# JetBrains IDEs (e.g. PyCharm)
+.idea/
+
+# Jupyter (if you're mixing notebooks)
+.ipynb_checkpoints/
+
