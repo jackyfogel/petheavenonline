@@ -1,4 +1,6 @@
 from django.db import models
+import logging
+logger = logging.getLogger(__name__)
 # Create your models here.
 
 class BlogPost(models.Model):
@@ -14,3 +16,11 @@ class BlogPost(models.Model):
     seo_description = models.CharField(max_length=200, null=True, blank=True)
     canonical_url = models.URLField(blank=True, null=True)
     noindex = models.BooleanField(default=False)
+
+    def save(self, *args, **kwargs):
+        if self.featured_image:
+            logger.warning(f"🖼 Attempting to save image: {self.featured_image.name}")
+        else:
+            logger.warning("🚫 No image uploaded")
+
+        super().save(*args, **kwargs)
