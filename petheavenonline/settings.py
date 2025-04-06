@@ -25,7 +25,8 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-wbilxloqh+*)o^2p^v0*--o=9^gv$(y0_#)j$am#v26zm(0w_u'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = os.environ.get('DEBUG', 'True') == 'True'
+
 
 ALLOWED_HOSTS = ['petheavenonline.com', 'www.petheavenonline.com','localhost', 'petheavenonline.onrender.com']
 
@@ -125,14 +126,15 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/5.1/howto/static-files/
 
 STATIC_URL = '/static/'
-
-if not DEBUG:
-    STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
-    STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')  # Always needed for collectstatic
 
 STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, 'static')  # this is where your dev static files live
+    os.path.join(BASE_DIR, 'static')
 ]
+
+if not DEBUG:
+    STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+
 
 
 
