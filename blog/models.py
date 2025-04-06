@@ -18,9 +18,8 @@ class BlogPost(models.Model):
     noindex = models.BooleanField(default=False)
 
     def save(self, *args, **kwargs):
-        if self.featured_image:
-            logger.warning(f"🖼 Attempting to save image: {self.featured_image.name}")
-        else:
-            logger.warning("🚫 No image uploaded")
+        if self.featured_image and not hasattr(self.featured_image, '_committed'):
+            logger.warning(f"🖼 Forcing save of image: {self.featured_image.name}")
+            self.featured_image.save(self.featured_image.name, self.featured_image.file, save=False)
 
         super().save(*args, **kwargs)
