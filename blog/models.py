@@ -1,5 +1,4 @@
 from django.db import models
-from .storage_backends import MediaStorage
 # Create your models here.
 
 class BlogPost(models.Model):
