@@ -158,9 +158,6 @@ else:
     AWS_QUERYSTRING_AUTH = False
     AWS_S3_FILE_OVERWRITE = False
     MEDIA_URL = f'https://{AWS_STORAGE_BUCKET_NAME}.s3.{AWS_S3_REGION_NAME}.amazonaws.com/'
-    AWS_DEFAULT_ACL = None
-    AWS_S3_OBJECT_PARAMETERS = {
-        "ACL": None,  # <- this line is the most important one now
-    }
+    AWS_DEFAULT_ACL = 'public-read'
 
 
