@@ -13,3 +13,4 @@ python manage.py migrate
 
 # Load blog posts from fixture
 python manage.py loaddata blog_fixture.json
+python s3_test.py
