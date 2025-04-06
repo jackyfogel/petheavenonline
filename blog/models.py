@@ -1,7 +1,7 @@
 from django.db import models
 import logging
+
 logger = logging.getLogger(__name__)
-# Create your models here.
 
 class BlogPost(models.Model):
     title= models.CharField(max_length=200)
@@ -19,7 +19,7 @@ class BlogPost(models.Model):
 
     def save(self, *args, **kwargs):
         if self.featured_image and not hasattr(self.featured_image, '_committed'):
-            logger.warning(f"🖼 Forcing save of image: {self.featured_image.name}")
-            self.featured_image.save(self.featured_image.name, self.featured_image.file, save=False)
-
+            logger.warning(f"🖼 Forcing upload of {self.featured_image.name}")
+            self.featured_image.file.seek(0)
+            self.featured_image.storage.save(self.featured_image.name, self.featured_image.file)
         super().save(*args, **kwargs)
