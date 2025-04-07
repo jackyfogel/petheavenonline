@@ -17,9 +17,3 @@ class BlogPost(models.Model):
     canonical_url = models.URLField(blank=True, null=True)
     noindex = models.BooleanField(default=False)
 
-    def save(self, *args, **kwargs):
-        if self.featured_image and not hasattr(self.featured_image, '_committed'):
-            logger.warning(f"🖼 Forcing upload of {self.featured_image.name}")
-            self.featured_image.file.seek(0)
-            self.featured_image.storage.save(self.featured_image.name, self.featured_image.file)
-        super().save(*args, **kwargs)
