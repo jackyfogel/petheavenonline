@@ -55,3 +55,4 @@ htmlcov/
 .ipynb_checkpoints/
 
 .env
+# force git to track this file
