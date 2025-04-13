@@ -34,9 +34,9 @@ pip-delete-this-directory.txt
 
 # Migrations (optional: include if you want to reset migrations often)
 */migrations/__pycache__/
-*/migrations/*.py[cod]
-# Uncomment next line to ignore migration files entirely
-# */migrations/*.py
+# Allow actual .py files inside migrations folders
+# (we still ignore .pyc, .pyo, .pyd, etc. elsewhere)
+!*/migrations/*.py
 
 # Node (if using npm/yarn in your static folder)
 node_modules/
