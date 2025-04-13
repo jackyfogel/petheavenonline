@@ -26,7 +26,6 @@ class BlogPost(models.Model):
         ('open', 'Open'),
         ('closed', 'Closed'),
     ]
-    # author = models.ForeignKey('auth.User', on_delete=models.CASCADE)
     title = models.CharField(max_length=100)
     slug = models.SlugField(max_length=100, unique=True, blank=True)
     content = models.TextField()

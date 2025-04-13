@@ -14,7 +14,6 @@ class BlogPostAdmin(admin.ModelAdmin):
     list_filter = ['status', 'category', 'published_at']
     search_fields = ['title', 'content', 'seo_title', 'seo_description']
     prepopulated_fields = {'slug': ('title',)}  # auto-fill slug from title
-    # raw_id_fields = ['author']
     date_hierarchy = 'published_at'
     ordering = ['-published_at']
 
