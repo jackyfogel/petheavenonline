@@ -5,6 +5,11 @@ from .models import BlogPost
 def blog_home(request):
     return render(request,'blog/index.html')
 
-def post_detail(request, slug):
-    post = get_object_or_404(BlogPost, slug=slug)
-    return render(request, 'blog/post_detail.html', {'post': post})
+def blog_post(request, year, month, slug):
+    post = get_object_or_404(
+        BlogPost,
+        slug=slug,
+        published_at__year=year,
+        published_at__month=month
+    )
+    return render(request, 'blog/blog_post.html', {'post': post})
