@@ -1,67 +1,8 @@
+{% extends "base.html" %}
 {% load static %}
-<!DOCTYPE html>
-<html class="wide wow-animation" lang="en">
-  <head>
-    <title>Home</title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <link rel="icon" href="{% static 'images/favicon.ico' %}" type="image/x-icon">
-    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Raleway:300,400,500,600,700%7CPlayfair+Display:400,400i,700,900%7CPoppins:300">
-    <link rel="stylesheet" href="{% static '' %}css/bootstrap.css">
-    <link rel="stylesheet" href="{% static '' %}css/fonts.css">
-    <link rel="stylesheet" href="{% static '' %}css/style.css">
-    <link rel="stylesheet" href="{% static '' %}css/mycss.css">
-  </head>
-<body>
-<div class="preloader">
-      <div class="preloader-body">
-        <div class="cssload-container">
-          <div class="cssload-speeding-wheel"></div>
-        </div>
-      </div>
-    </div>
-    <div class="page">
-      <!-- Page Header-->
-      <header clas"section page-header">
-        <!-- RD Navbar-->
-        <div class="rd-navbar-wrap">
-          <nav class="rd-navbar rd-navbar-modern context-dark" data-layout="rd-navbar-fixed" data-sm-layout="rd-navbar-fixed" data-md-layout="rd-navbar-fixed" data-md-device-layout="rd-navbar-fixed" data-lg-layout="rd-navbar-fixed" data-lg-device-layout="rd-navbar-fixed" data-xl-layout="rd-navbar-static" data-xl-device-layout="rd-navbar-static" data-lg-stick-up-offset="46px" data-xl-stick-up-offset="46px" data-xxl-stick-up-offset="46px" data-lg-stick-up="true" data-xl-stick-up="true" data-xxl-stick-up="true">
-            <div class="rd-navbar-main-outer">
-              <div class="rd-navbar-main">
-                <!-- RD Navbar Panel-->
-                <div class="rd-navbar-panel">
-                  <!-- RD Navbar Toggle-->
-                  <button class="rd-navbar-toggle" data-rd-navbar-toggle=".rd-navbar-nav-wrap"><span></span></button>
-                  <!-- RD Navbar Brand-->
-                  <div class="rd-navbar-brand">
-                    <!--Brand--><a class="brand" href="{% url 'home' %}"><img class="brand-logo-dark" src="{% static 'images/logo.webp' %}" alt="" width="151" height="42"/><img class="brand-logo-light" src="{% static 'images/logo.webp' %}" alt="" width="151" height="42"/></a>
-                  </div>
-                </div>
-                <div class="rd-navbar-main-element">
-                  <div class="rd-navbar-nav-wrap">
-                    <!-- RD Navbar Nav-->
-                    <ul class="rd-navbar-nav">
-                      <li class="rd-nav-item active"><a class="rd-nav-link" href="{% url 'home' %}">Home</a>
-                      </li>
-                      <li class="rd-nav-item"><a href="{% url 'memorial' %}" class="rd-nav-link">Memorial</a>
+{% block title %}Blog Post | Pet Heaven{% endblock %}
 
-                      </li>
-
-
-
-                      <li class="rd-nav-item"><a class="rd-nav-link" href="contacts.html">Contacts</a>
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </nav>
-        </div>
-      </header>
-      <!-- Swiper-->
-
+{% block content %}
 <section class="text-white position-relative py-5" style="
   background-image: url('{% static 'images/breadcrumbs-bg.jpg' %}');
   background-size: cover;
@@ -174,11 +115,15 @@
     </div>
   </div>
 </section>
-<div class="snackbars" id="form-output-global"></div>
-<script src="js/bootstrap.bundle.min.js"></script>
-<script src="{% static 'js/core.min.js' %}"></script>
-<script src="{% static 'js/script.js' %}"></script>
+
+{% endblock %}
 
 
-</body>
-</html>
+
+
+
+
+
+
+
+
