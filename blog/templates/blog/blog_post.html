@@ -8,11 +8,11 @@
           <div class="container">
             <div class="row justify-content-center">
               <div class="col-12 col-lg-9">
-                <h1 class="breadcrumbs-custom-title">Top 5 Rules for Accessorizing Your Wedding Dress</h1>
+                <h1 class="breadcrumbs-custom-title">{{ post.title }}</h1>
                 <ul class="breadcrumbs-custom-path">
                   <li><a href="index.html">Home</a></li>
-                  <li><a href="#">Pages</a></li>
-                  <li class="active">Single Blog Post</li>
+                  <li><a href="#">{{ post.category }}</a></li>
+                  <li class="active">{{ post.title|truncatewords:6}}</li>
                 </ul>
               </div>
             </div>
@@ -22,20 +22,21 @@
     <section class="section section-lg bg-default">
         <div class="container">
           <div class="row">
-            <div class="col-12"><img src="{% static 'images/blog-post-2-1170x456.jpg' %}" alt="" width="1170" height="456"/>
+            <div class="col-12">{% if post.featured_image %}
+  <img src="{{ post.featured_image.url }}" alt="{{ post.title }}" class="img-fluid rounded" />
+{% endif %}
             </div>
           </div>
 <div class="row row-50">
   <div class="col-12">
     <ul class="blog-post-meta">
-      <li><a class="badge" href="#">News</a></li>
-      <li><span class="icon mdi mdi-clock"></span>May 11, 2021</li>
+      <li><a class="badge" href="#">{{ post.category }}</a></li>
+      <li><span class="icon mdi mdi-clock"></span>{{ post.published_at|date:"F j, Y"}}</li>
       <li><span class="icon mdi mdi-eye"></span>345 views</li>
     </ul>
     <!-- <h3 class="blog-post-title">How to Make Your Wedding Dress Even More Amazing: Tips from Our Team</h3>-->
     <div class="blog-post-content">
-      <p>Diam in arcu cursus euismod quis. Sit amet venenatis urna cursus eget nunc scelerisque. Dictumst vestibulum rhoncus est pellentesque elit ullamcorper dignissim cras tincidunt. Mi in nulla posuere sollicitudin aliquam ultrices sagittis.</p>
-      <p>Et malesuada fames ac turpis egestas maecenas pharetra convallis posuere. Et netus et malesuada fames ac turpis egestas sed. Id neque aliquam vestibulum morbi blandit cursus risus. Commodo nulla facilisi nullam vehicula ipsum a. Viverra accumsan in nisl nisi scelerisque eu ultrices vitae. Leo vel fringilla est ullamcorper eget nulla facilisi. Id neque aliquam vestibulum morbi blandit cursus.</p>
+        {{ post.content|safe }}
     </div>
   </div>
 </div>
@@ -68,30 +69,36 @@
 
 
               <div class="owl-stage-outer"><div class="owl-stage" style="transform: translate3d(0px, 0px, 0px); transition: all; width: 1200px; padding-left: 15px; padding-right: 15px;"><div class="owl-item active" style="width: 360px; margin-right: 30px;"><div class="post-classic">
-                  <div class="post-classic-figure"><a href="#"><img src="{% static 'images/post-modern-1-370x255.jpg' %}" alt="" width="370" height="255"></a></div>
+                  <div class="post-classic-figure"><a href="#">{% if post.featured_image %}
+  <img src="{{ post.featured_image.url }}"  width="370" height="255" style="object-fit: cover; display: block;"/>
+{% endif %}</a></div>
                   <div class="post-classic-caption">
-                    <h4 class="post-classic-title"><a href="#">Why Hire a Professional Wedding Planner: 7 Tips</a></h4>
+                    <h4 class="post-classic-title"><a href="#">{{ post.title}}</a></h4>
                     <ul class="post-classic-meta">
-                      <li>April 25, 2021</li>
-                      <li><a class="post-classic-tag-secondary-2 post-classic-tag" href="#">Wedding</a></li>
+                      <li>{{ post.published_at|date:"F j, Y"}}</li>
+                      <li><a class="post-classic-tag-secondary-2 post-classic-tag" href="#">{{ post.category }}</a></li>
                     </ul>
                   </div>
                 </div></div><div class="owl-item active" style="width: 360px; margin-right: 30px;"><div class="post-classic">
-                  <div class="post-classic-figure"><a href="#"><img src="{% static 'images/post-modern-5-370x255.jpg' %}" alt="" width="370" height="255"></a></div>
+                  <div class="post-classic-figure"><a href="#">{% if post.featured_image %}
+  <img src="{{ post.featured_image.url }}"  width="370" height="255" style="object-fit: cover; display: block;"/>
+{% endif %}</a></div>
                   <div class="post-classic-caption">
-                    <h4 class="post-classic-title"><a href="#">Ideas from Amour: Where  to Have a Beach Wedding</a></h4>
+                    <h4 class="post-classic-title"><a href="#">{{ post.title}}</a></h4>
                     <ul class="post-classic-meta">
-                      <li>April 25, 2021</li>
-                      <li><a class="post-classic-tag-secondary post-classic-tag" href="#">News</a></li>
+                      <li>{{ post.published_at|date:"F j, Y"}}</li>
+                      <li><a class="post-classic-tag-secondary post-classic-tag" href="#">{{ post.category }}</a></li>
                     </ul>
                   </div>
                 </div></div><div class="owl-item active" style="width: 360px; margin-right: 30px;"><div class="post-classic">
-                  <div class="post-classic-figure"><a href="#"><img src="{% static 'images/post-modern-2-370x255.jpg' %}" alt="" width="370" height="255"></a></div>
+                  <div class="post-classic-figure"><a href="#">{% if post.featured_image %}
+  <img src="{{ post.featured_image.url }}"  width="370" height="255" style="object-fit: cover; display: block;"/>
+{% endif %}</a></div>
                   <div class="post-classic-caption">
-                    <h4 class="post-classic-title"><a href="#">7 Simple Ways to Create an Original Wedding Invitation</a></h4>
+                    <h4 class="post-classic-title"><a href="#">{{ post.title}}</a></h4>
                     <ul class="post-classic-meta">
-                      <li>April 25, 2021</li>
-                      <li><a class="post-classic-tag" href="#">News</a></li>
+                      <li>{{ post.published_at|date:"F j, Y"}}</li>
+                      <li><a class="post-classic-tag" href="#">{{ post.category }}</a></li>
                     </ul>
                   </div>
                 </div></div></div></div><div class="owl-nav disabled"><button type="button" role="presentation" class="owl-prev"></button><button type="button" role="presentation" class="owl-next"></button></div><div class="owl-dots disabled"><button role="button" class="owl-dot active"><span></span></button></div></div>

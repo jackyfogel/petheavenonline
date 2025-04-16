@@ -3,3 +3,20 @@ html, body {
 }
 
 .rd-navbar-main{border:none !important;}
+
+.blog-post-content ul {
+   list-style-type: disc !important;
+  padding-left: 1.5rem !important;
+  display: block !important;
+  overflow: visible !important;
+  position: relative !important;
+}
+
+.blog-post-content li {
+  display: list-item !important;
+  list-style-position: outside !important;
+  margin-bottom: 0.75rem !important;
+  line-height: 1.7 !important;
+  font-size: 1.05rem !important;
+  color: #333 !important;
+}
