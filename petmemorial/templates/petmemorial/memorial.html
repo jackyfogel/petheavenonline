@@ -22,13 +22,16 @@
 
   <!-- Actual content -->
   <div class="container text-center position-relative" style="z-index: 2;padding-top:7rem;">
-    <img
+      {% if p.photo %}
+          <img
       src="{{ p.photo.url }}"
       class="rounded-circle mb-4 img-fluid"
       alt="Pet Photo"
 
       style="display: block; margin: 0 auto;"
     />
+      {% endif %}
+
     <h2 class="breadcrumbs-custom-title" style="color:#ffffff">In Loving Memory {{ p.pet_name}}</h2>
     <p class="lead">{{ p.year_of_birth }} – {{ p.year_of_death }}</p>
     <p class="fst-italic">"{{ p.tribute_quote}}"</p>
