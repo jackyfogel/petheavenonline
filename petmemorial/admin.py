@@ -19,7 +19,6 @@ class PetMemorialAdmin(admin.ModelAdmin):
     search_fields = ("pet_name", "user__username", "species", "breed")
     list_filter = ("species", "year_of_death")
     ordering = ("-year_of_death",)
-    prepopulated_fields = {"slug": ("pet_name",)}  # auto-generate slug from pet name
     inlines = [PetMemorialGalleryImageInline, CandleMessageInline]
 
 
