@@ -45,6 +45,7 @@ INSTALLED_APPS = [
     'petmemorial',
     'blog',
     'storages',
+    'widget_tweaks',
 ]
 
 MIDDLEWARE = [
