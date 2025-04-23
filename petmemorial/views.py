@@ -18,15 +18,26 @@ def register_view(request):
         if form.is_valid():
             user = form.save()
 
-            send_mail(
-                subject='Welcome to Pet Heaven 🐾',
-                message='Thanks for signing up! You can now create memorials for your beloved pets.',
-                from_email=os.getenv('EMAIL_HOST_USER'),
-                recipient_list=[user.email],
-            )
+            try:
+                send_mail(
+                    subject='Welcome to Pet Heaven 🐾',
+                    message='Thanks for signing up! You can now create memorials for your beloved pets.',
+                    from_email=os.getenv('EMAIL_HOST_USER'),
+                    recipient_list=[user.email],
+                    fail_silently=False,
+                )
+            except Exception as e:
+                messages.error(request, f'Something went wrong sending email: {e}')
+
             messages.success(request, 'Registration successful! You can now log in.')
             return redirect('login')
+        else:
+            print("💥 FORM ERRORS:", form.errors)  # 👈 LOG FORM ERRORS TO TERMINAL
+            messages.error(request, 'Something went wrong with your form. Please try again.')
+
     else:
         form = EmailRegistrationForm()
 
     return render(request, 'petmemorial/register.html', {'form': form})
+
+

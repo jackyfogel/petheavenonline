@@ -640,6 +640,7 @@ COPY public.django_admin_log (id, action_time, object_id, object_repr, action_fl
 11	2025-04-21 08:25:27.205073+00	2	PetMemorial object (2)	1	[{"added": {}}, {"added": {"name": "pet memorial gallery image", "object": "Gallery image for jack"}}]	11	1
 12	2025-04-21 16:00:43.818409+00	3	PetMemorial object (3)	1	[{"added": {}}, {"added": {"name": "pet memorial gallery image", "object": "Gallery image for Sandy"}}, {"added": {"name": "pet memorial gallery image", "object": "Gallery image for Sandy"}}, {"added": {"name": "pet memorial gallery image", "object": "Gallery image for Sandy"}}]	11	1
 13	2025-04-21 16:04:18.702949+00	4	PetMemorial object (4)	1	[{"added": {}}]	11	1
+14	2025-04-23 05:15:46.548377+00	2	jackyfogel1	3		4	1
 \.
 
 
@@ -781,7 +782,7 @@ SELECT pg_catalog.setval('public.auth_user_groups_id_seq', 1, false);
 -- Name: auth_user_id_seq; Type: SEQUENCE SET; Schema: public; Owner: petheaven_db_user
 --
 
-SELECT pg_catalog.setval('public.auth_user_id_seq', 1, true);
+SELECT pg_catalog.setval('public.auth_user_id_seq', 2, true);
 
 
 --
@@ -816,7 +817,7 @@ SELECT pg_catalog.setval('public.blog_comment_id_seq', 1, false);
 -- Name: django_admin_log_id_seq; Type: SEQUENCE SET; Schema: public; Owner: petheaven_db_user
 --
 
-SELECT pg_catalog.setval('public.django_admin_log_id_seq', 13, true);
+SELECT pg_catalog.setval('public.django_admin_log_id_seq', 14, true);
 
 
 --
