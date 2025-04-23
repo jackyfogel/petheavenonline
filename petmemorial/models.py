@@ -1,3 +1,5 @@
+from random import choices
+
 from django.contrib.auth.models import User
 from django.db import models
 from django.utils.text import slugify
@@ -43,6 +45,10 @@ class PetMemorial(models.Model):
         ("hedgehog", "Hedgehog"),
         ("other", "Other"),
     ]
+    STATUS_CHOICES = [
+        ('pending', 'Pending'),
+        ('published', 'Published'),
+    ]
 
     photo = models.ImageField(upload_to=pet_memorial_profile_photo_path, null=True, blank=True)
     pet_name = models.CharField(max_length=100)
@@ -57,6 +63,7 @@ class PetMemorial(models.Model):
     about_pet = models.TextField(blank=True, null=True)
     video_url = models.URLField(blank=True, null=True)
     owner_display_name = models.CharField(blank=True, null=True, max_length=100)
+    status = models.CharField(max_length=20, choices=STATUS_CHOICES, default='pending')
 
     def save(self, *args, **kwargs):
         # First: Generate unique slug

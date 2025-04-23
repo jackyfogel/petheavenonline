@@ -1,6 +1,7 @@
 from django import forms
 from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth.models import User
+from .models import PetMemorial
 
 class EmailRegistrationForm(UserCreationForm):
     email = forms.EmailField(required=True)
@@ -33,3 +34,7 @@ class EmailRegistrationForm(UserCreationForm):
         if commit:
             user.save()
         return user
+class PetMemorialForm(forms.ModelForm):
+    class Meta:
+        model = PetMemorial
+        exclude = ['user', 'status', 'slug']
